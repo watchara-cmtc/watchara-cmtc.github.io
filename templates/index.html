@@ -1,0 +1,35 @@
+{% include 'navbar.html' %} {% block content %}
+<style>
+    .ulc ul {
+        margin: auto;
+        width: 8%;
+    }
+</style>
+<title>Document</title>
+<center>
+
+    <div class="ulc">
+        <br>
+        <!-- name : {{testdata.name}} -->
+        <h2>Homepage</h2>
+        <p>Welcome to Guerriers's Record Page</p>
+        <h2>To travel on the world</h2>
+        <h2>ชื่อบทความ : {{name}}</h2>
+        <h3>ชื่อผู้เขียน : {{author}}</h3>
+        <h2>ป้ายกำกับ</h2>
+        <ul>
+            {% for tag in tags %}
+            <li>
+                <p>{{tag}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        <h2>ความนิยม</h2>
+        {% if ratting > 3%}
+        <h3>ดีมาก ({{ratting}})</h3>
+        {% else %}
+        <h3>ไม่ได้รับความนิยม</h3>
+        {% endif %}
+    </div>
+</center>
+{% endblock %} {% include 'footer.html' %}

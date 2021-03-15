@@ -1,0 +1,40 @@
+{% include 'navbar.html' %} {% block content %}
+<style scoped>
+    .header-title {
+        margin: auto;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 36px;
+        color: red;
+    }
+    
+    .name-title {
+        margin-top: 20px;
+    }
+    
+    .name-des {
+        margin-top: 20px;
+    }
+</style>
+<p class="header-title">เขียนบทความ</p>
+<form action="/result/" method="POST">
+    {% csrf_token %}
+    <div class="container">
+
+        <div class="name-title">
+            <label for="">ชื่อบทความ</label>
+            <input type="text" class="form-control" name="name">
+        </div>
+
+        <div class="name-des">
+            <label for="">รายละเอียด</label>
+            <input type="text" class="form-control" name="des"> <br>
+        </div>
+
+        <div>
+            <input type="submit" class="btn btn-primary" value="บันทึกบทความ"></input>
+        </div>
+    </div>
+
+</form>
+{% endblock %} {% include 'footer.html' %}

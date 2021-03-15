@@ -1,0 +1,36 @@
+{% include 'navbar.html' %} {% block content %}
+<style scoped>
+    .container {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .div-header {
+        color: darkblue;
+        border-bottom: 2px solid;
+    }
+    
+    .div-name {
+        margin-top: 20px;
+        color: #d3a4ff;
+    }
+    
+    .div-des {
+        margin-top: 20px;
+        color: skyblue;
+    }
+</style>
+<div class="container">
+
+    <div class="div-header">
+        <h1>แสดงบทความ</h1>
+    </div>
+    <div class="div-name">
+
+        <h2>ชื่อบทความ: {{name}}</h2>
+    </div>
+    <div class="div-des">
+        <h3>รายละเอียด: {{des}}</h3>
+    </div>
+</div>
+{% endblock %} {% include 'footer.html' %}
